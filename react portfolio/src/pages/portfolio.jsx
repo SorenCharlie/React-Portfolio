@@ -1,5 +1,4 @@
 import React from 'react';
-import Project from './Project';
 
 const projects = [
   {
@@ -23,7 +22,10 @@ const Portfolio = () => {
       <h2>Portfolio</h2>
       <div>
         {projects.map((project, index) => (
-          <Project key={index} {...project} />
+          <div key = {index}>
+          <h2>{project.title}</h2>
+          <a href={project.repoLink}>Repo Link</a>
+          </div>
         ))}
       </div>
     </section>
